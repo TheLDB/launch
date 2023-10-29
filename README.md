@@ -1,7 +1,7 @@
-# Dotfiles
+# Dotfiles
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/tale/dotfiles/main/bootstrap.sh | bash -
+curl -fsSL https://raw.githubusercontent.com/TheLDB/launch/main/bootstrap.sh | bash -
 ```
 All of the files with the dots in them, but with a few requirements:
 - It has to be easy, because I'm lazy
