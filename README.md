@@ -1,4 +1,5 @@
-# Dotfiles
+# Dotfiles
+
 ```sh
 curl -fsSL https://raw.githubusercontent.com/tale/dotfiles/main/bootstrap.sh | bash -
 ```
