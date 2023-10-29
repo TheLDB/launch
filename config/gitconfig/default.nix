@@ -5,7 +5,7 @@
     userName = "TheLDB";
     signing = {
       gpgPath = "${pkgs.gnupg}/bin/gpg";
-      key = "AA804838ACF0909C1713F4283205E18CEDD2C007";
+      key = "1C7644A0E4CF7D87AAD4654E27B1F725FAA9C7CB";
       signByDefault = true;
     };
     aliases = {

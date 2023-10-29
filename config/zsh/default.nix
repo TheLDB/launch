@@ -52,8 +52,7 @@
       LESSHISTFILE = "-";
       OS = "$(uname -s)";
       dd = "$DOTDIR";
-
-      THEOS = "$HOME/Library/Theos";
+      
       d = "$HOME/Developer";
     };
   };

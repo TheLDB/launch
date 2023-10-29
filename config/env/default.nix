@@ -51,10 +51,6 @@
   };
 
   home.file = {
-    ".theosrc".text = ''
-      THEOS_DEVICE_IP ?= localhost
-      THEOS_DEVICE_PORT ?= 2222
-    '';
     ".huskyrc".text = ''
       HOOKS_DIR=$(git config --global core.hooksPath)
       HOOK_PATH="$HOOKS_DIR/$hook_name"
@@ -67,10 +63,6 @@
   };
 
   home.activation = {
-    installTheos = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      THEOS="$HOME/Library/Theos"
-      [ -d "$THEOS" ] || $DRY_RUN_CMD ${pkgs.git}/bin/git clone --recursive https://github.com/theos/theos.git "$THEOS"
-    '';
     configureRust = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       	  $DRY_RUN_CMD ${pkgs.rustup}/bin/rustup default stable
       	'';

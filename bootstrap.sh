@@ -35,7 +35,7 @@ prompt() {
 # Variables
 OS=$(uname -s)
 DOTDIR=${DOTDIR:-"$HOME/.config/dotfiles"}
-DOTDIR_REPO="https://github.com/tale/dotfiles"
+DOTDIR_REPO="https://github.com/TheLDB/launch"
 
 NIX_SCRIPT="https://nixos.org/nix/install"
 BREW_SCRIPT="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
@@ -123,5 +123,5 @@ open -a "Maccy"
 open -a "Bartender 4"
 open -a "MonitorControl"
 
-git -C $DOTDIR remote set-url origin git@github.com:tale/dotfiles.git
+git -C $DOTDIR remote set-url origin git@github.com:TheLDB/launch.git
 notify "It's probably a good idea to reboot now"

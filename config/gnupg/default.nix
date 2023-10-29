@@ -1,14 +1,14 @@
 { lib, pkgs, config, ... }:
 let
   pinentry-mac = "${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac";
-  publicKeyFingerprint = "3205E18CEDD2C007";
+  publicKeyFingerprint = "27B1F725FAA9C7CB";
 in
 {
   home.packages = with pkgs; [ pinentry_mac ];
   programs.gpg = {
     enable = true;
     settings = {
-      keyserver = "hkps://pgp.mit.edu";
+      keyserver = "hkp://keys.openpgp.org";
       default-key = publicKeyFingerprint;
     };
   };

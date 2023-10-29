@@ -118,7 +118,7 @@
       ./env
       ./gitconfig
       ./zsh
-      # ./gnupg - idk what this is
+      ./gnupg
       ./nvim
       # ./tui - dont like
     ];
