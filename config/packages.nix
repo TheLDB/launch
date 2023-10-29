@@ -60,35 +60,15 @@ in
   home.packages = with pkgs; [
     bat
     cloudflared
-    syncthing
-    zstd
     kubectl
-    kubernetes-helm
-    jq
-    yq
     curl
     wget
-    caddy
     btop
-    cmake
-    fzf
-    delta
-    rsync
-    s3cmd
-    minikube
-    gnumake
-    tree-sitter
-    yubikey-manager
-    postgresql_jit
-    yubikey-personalization
-    gnutar
+    # s3cmd - might loook into eventually
+    # yubikey-manager
+    # postgresql_jit
+    # yubikey-personalization
     coreutils
-    fd
-    findutils
-    pam-reattach
-    ripgrep
-    go-task
-    libusbmuxd
     macos-trash
     iconset
     dockutil

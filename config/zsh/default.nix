@@ -3,7 +3,7 @@
     zshRecompile = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       HM_REBUILD=1 $DRY_RUN_CMD ${pkgs.zsh}/bin/zsh -l -c 'exit'
     '';
-  };
+  };  
 
   programs.zsh = {
     enable = true;
@@ -43,13 +43,8 @@
       vim = "nvim";
       htop = "btop";
 
-      mk = "minikube";
-      mkmk = "minikube start --driver=docker --kubernetes-version=v1.27.0";
       nix-rebuild = "darwin-rebuild switch --flake $DOTDIR";
       nix-gc = "nix-collect-garbage --delete-old";
-
-      # Tells GPG to rebuild its PKS cache when switching between keys
-      yks = "gpg-connect-agent 'scd serialno' 'learn --force' /bye";
     };
 
     sessionVariables = {

@@ -8,15 +8,6 @@ if test -e /etc/static/zshrc; then
 	. /etc/static/zshrc;
 fi
 
-# Register the tmux launch command
-launch() {
-	if [[ -z $TMUX ]]; then
-		"$dd/config/tui/tmux_launch.sh"
-	else
-		tmux popup -EE -w 60% -h 60% "$dd/config/tui/tmux_launch.sh"
-	fi
-}
-
 setopt prompt_subst
 PROMPT='%F{cyan}%~%f ${vcs_info_msg_0_}%f➜ '
 
@@ -57,16 +48,6 @@ function plsdns() {
 
 precmd() {
 	vcs_info
-
-	if [[ -z $TMUX ]]; then
-		# If tmux list-sessions says tmux isn't running, invoke launch
-		# Otherwise tmux is most likely running and can reattach
-		if [[ -z $(tmux list-sessions 2>/dev/null) ]]; then
-			launch
-		else
-			tmux attach
-		fi
-	fi
 }
 
 if [[ -f $ZDOTDIR/.zcompdump ]]; then
@@ -76,13 +57,3 @@ fi
 
 autoload -Uz compinit
 [ $(date +"%j") != $COMPINIT_STAT ] && compinit || compinit -C
-
-if [[ -z $TMUX ]]; then
-	# If tmux list-sessions says tmux isn't running, invoke launch
-	# Otherwise tmux is most likely running and can reattach
-	if [[ -z $(tmux list-sessions 2>/dev/null) ]]; then
-		launch
-	else
-		tmux attach
-	fi
-fi

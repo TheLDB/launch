@@ -21,9 +21,9 @@
       pkgs-unstable = nixpkgs-unstable.legacyPackages."aarch64-darwin";
     in
     {
-      darwinConfigurations."Aarnavs-MBP" = darwin.lib.darwinSystem {
+      darwinConfigurations."Landons-MBP" = darwin.lib.darwinSystem {
         inherit pkgs;
-        system = "aarch64-darwin"; # M1 Max
+        system = "aarch64-darwin"; # M1 Pro
         modules = [
           home-manager.darwinModules.home-manager
           {

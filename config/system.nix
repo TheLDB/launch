@@ -7,42 +7,19 @@
     caskArgs = {
       no_quarantine = true;
     };
-    masApps = {
-      Things = 904280696;
-    };
     casks = [
       "1password"
-      "adobe-acrobat-reader"
-      "aldente"
-      "bartender"
-      "cleanmymac"
-      "cleanshot"
-      "craft"
-      "datagrip"
+      "daisydisk"
       "discord"
-      "google-chrome"
-      "iina"
+      "arc"
       "imageoptim"
-      "maccy"
-      "microsoft-excel"
-      "microsoft-word"
-      "minecraft"
       "monitorcontrol"
       "mullvadvpn"
       "orbstack"
-      "postman"
       "raycast"
-      "rectangle"
-      "sensei"
-      "soulver"
       "spotify"
-      "steam"
-      "syncthing"
       "tailscale"
-      "the-unarchiver"
-      "wezterm"
       "xcodes"
-      "zoom"
     ];
   };
 
@@ -72,12 +49,6 @@
     };
   };
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
-  # TODO: programs.ssh & services.openssh
   programs.zsh = {
     enable = true;
     promptInit = "";
@@ -123,17 +94,16 @@
     screencapture.type = "png";
   };
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Denver";
 
-  # TODO: Add OpenSSH things
-  users.users.tale = {
-    name = "tale";
-    home = "/Users/tale";
+  users.users.landonboles = {
+    name = "landonboles";
+    home = "/Users/landonboles";
   };
 
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
-  home-manager.users.tale = { pkgs, lib, ... }: {
+  home-manager.users.landonboles = { pkgs, lib, ... }: {
     home.stateVersion = "23.05";
     home.activation = {
       # nix-darwin doesn't set defaults when running as sudo
@@ -148,9 +118,9 @@
       ./env
       ./gitconfig
       ./zsh
-      ./gnupg
+      # ./gnupg - idk what this is
       ./nvim
-      ./tui
+      # ./tui - dont like
     ];
   };
 

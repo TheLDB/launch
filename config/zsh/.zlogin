@@ -1,7 +1,7 @@
 # The idea here is to compile Zsh scripts if they're stale
 # Loading Zsh Code Word is faster than parsing script files for the shell
 {
-	setopt extended_glob
+	setopt extended_glob nonomatch
 	hot_compile() {
 		if [[ ! -s "$1" ]]; then
 			return

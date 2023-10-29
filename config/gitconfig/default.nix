@@ -1,8 +1,8 @@
 { pkgs, config, ... }: {
   programs.git = {
     enable = true;
-    userEmail = "aarnavtale@icloud.com";
-    userName = "Aarnav Tale";
+    userEmail = "ldb@erikboles.com";
+    userName = "TheLDB";
     signing = {
       gpgPath = "${pkgs.gnupg}/bin/gpg";
       key = "AA804838ACF0909C1713F4283205E18CEDD2C007";
