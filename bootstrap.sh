@@ -61,7 +61,7 @@ else
 fi
 
 # Various setups
-$SUDO scutil --set LocalHostName Aarnavs-MBP
+$SUDO scutil --set LocalHostName Landons-MBP
 dscacheutil -flushcache
 mkdir -p "$HOME/Developer"
 $SUDO softwareupdate --install-rosetta --agree-to-license
