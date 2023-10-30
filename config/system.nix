@@ -49,6 +49,11 @@
     };
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
   programs.zsh = {
     enable = true;
     promptInit = "";
