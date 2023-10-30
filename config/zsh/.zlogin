@@ -21,9 +21,9 @@
 	}
 
 	# Significant speedup when compiling completion cache
-	# for file in ${ZDOTDIR:-$HOME}/.zcomp^(*.zwc)(.); do
-	# 	hot_compile "$file"
-	# done
+	for file in ${ZDOTDIR:-$HOME}/.zcomp^(*.zwc)(.); do
+		hot_compile "$file"
+	done
 
 	hot_compile "${ZDOTDIR:-$HOME}/.zshrc"
 	# hot_compile "$DOTDIR/config/zsh/lscolors.zsh"
