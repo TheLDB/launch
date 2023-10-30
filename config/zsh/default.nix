@@ -20,7 +20,7 @@
     autocd = true;
     defaultKeymap = "viins";
     enableAutosuggestions = true;
-    enableCompletion = false; # Manually enabled later
+    enableCompletion = true; # Manually enabled later
     history = {
       expireDuplicatesFirst = true;
       extended = true;
