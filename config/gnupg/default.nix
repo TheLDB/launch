@@ -32,8 +32,8 @@ in
           --recv-keys ${publicKeyFingerprint}
 
         $DRY_RUN_CMD echo -e "5\ny\n" | ${pkgs.gnupg}/bin/gpg \
-          --command-fd 0
-          --expert
+          --command-fd 0 \
+          --expert \
           --edit-key ${publicKeyFingerprint} trust
       fi
     '';
