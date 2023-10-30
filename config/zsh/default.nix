@@ -8,6 +8,10 @@
   programs.zsh = {
     enable = true;
 
+    oh-my-zsh = {
+      enable = true;
+    };
+    
     # Compile scripts for faster loading times
     loginExtra = builtins.readFile ./.zlogin;
     initExtra = builtins.readFile ./.zshrc;
