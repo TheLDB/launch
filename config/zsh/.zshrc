@@ -31,7 +31,7 @@ zstyle ":completion:*" file-list list=20
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
 zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # On macOS ~/Library/Caches is the recommended location for caches
 zstyle ":completion:*" cache-path "$HOME/Library/Caches/zsh/.zcompcache"
