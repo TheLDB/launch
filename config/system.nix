@@ -122,6 +122,7 @@
       ./packages.nix
       ./env
       ./gitconfig
+      ./starship
       ./zsh
       ./gnupg
       ./nvim
