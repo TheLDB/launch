@@ -35,7 +35,8 @@
       k = "kubectl";
 
       cat = "bat";
-      ls = "ls --color=auto -lah";
+      ls = "eza";
+      l = "eza -a";
       ll = "ls --color=auto -lah";
       la = "ls --color=auto -lah";
 
@@ -52,7 +53,7 @@
       LESSHISTFILE = "-";
       OS = "$(uname -s)";
       dd = "$DOTDIR";
-      
+
       d = "$HOME/Developer";
     };
   };
