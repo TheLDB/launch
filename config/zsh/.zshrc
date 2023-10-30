@@ -50,10 +50,10 @@ precmd() {
 	vcs_info
 }
 
-# if [[ -f $ZDOTDIR/.zcompdump ]]; then
-# 	# Hardcoded to use BSD stat
-# 	COMPINIT_STAT=$(/usr/bin/stat -f "%Sm" -t "%j" $ZDOTDIR/.zcompdump)
-# fi
+if [[ -f $ZDOTDIR/.zcompdump ]]; then
+	# Hardcoded to use BSD stat
+	COMPINIT_STAT=$(/usr/bin/stat -f "%Sm" -t "%j" $ZDOTDIR/.zcompdump)
+fi
 
 autoload -Uz compinit
 [ $(date +"%j") != $COMPINIT_STAT ] && compinit || compinit -C
