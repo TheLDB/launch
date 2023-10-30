@@ -64,7 +64,6 @@ in
     curl
     wget
     btop
-    eza # better LS
     # s3cmd - might loook into eventually
     # yubikey-manager
     # postgresql_jit

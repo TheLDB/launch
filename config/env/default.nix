@@ -22,6 +22,7 @@
     pkgs-unstable.nodePackages_latest.vscode-langservers-extracted
     pkgs-unstable.nodePackages_latest.yaml-language-server
     pkgs-unstable.stylua
+    pkgs-unstable.eza
   ];
 
   programs.ssh = {
