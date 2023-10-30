@@ -84,11 +84,9 @@ in
 
     dockFixup = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --remove all --no-restart $HOME
-      $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /Applications/Google\ Chrome.app --no-restart $HOME
+      $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /Applications/Arc.app --no-restart $HOME
       $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /System/Applications/Messages.app --no-restart $HOME
       $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /System/Applications/Calendar.app --no-restart $HOME
-      $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /System/Applications/Mail.app --no-restart $HOME
-      $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /Applications/Things3.app --no-restart $HOME
       $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add /Applications/Spotify.app --no-restart $HOME
       $DRY_RUN_CMD ${pkgs.dockutil}/bin/dockutil --add '~/Downloads' --view grid --display folder --section others --no-restart $HOME
       $DRY_RUN_CMD /usr/bin/killall Dock
