@@ -62,6 +62,7 @@ fi
 
 # Various setups
 $SUDO scutil --set LocalHostName Landons-MBP
+$SUDO scutil --set ComputerName Landons-MBP
 dscacheutil -flushcache
 mkdir -p "$HOME/Developer"
 $SUDO softwareupdate --install-rosetta --agree-to-license
